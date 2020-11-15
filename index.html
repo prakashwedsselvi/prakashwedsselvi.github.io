@@ -41,18 +41,17 @@
 <!-- KSV's functions-->
 <script>
     $( document ).ready(function() {
-      $.ajax({url: "https://ajaxhello.herokuapp.com/customers", success: function(result){
+      $.ajax({url: "https://rajwedding.herokuapp.com/rp/like/views",method:"POST", success: function(result){
            //alert(result);
         }});
-        $.ajax({url: "https://ajaxhello.herokuapp.com/customersnooflove", success: function(result){
-           //alert(result);
+        $.ajax({url: "https://rajwedding.herokuapp.com/rp/like", success: function(result){
            $("#loves").text(result+" loves so far");
         }});
 });
    $( document ).ready(function() {
 $( "#target" ).click(function() {
-     $.ajax({url: "https://ajaxhello.herokuapp.com/customerslove", success: function(result){
-           //alert(result);
+     $.ajax({url: "https://rajwedding.herokuapp.com/rp/like",method:"POST", success: function(result){
+           alert("Thanks for your love");
            $("#loves").text(result+" loves so far");
         }});
         $('#target').addClass('disabled');
